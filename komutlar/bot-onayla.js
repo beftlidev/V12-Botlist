@@ -17,6 +17,7 @@ exports.run = async (client, message, args) => {
     if(client.channels.cache.get(onayred).send('<:codesty_cross:844468546930606100> <@"+botid+"> adlı bot <@"+message.author.id+"> tarafından onaylandı!"));
     message.inlineReply('<:codesty_check:844468545877442560> <@"+botid+"> adlı bot onaylandı!")
     db.delete(`bot.id.${botid}`)
+    db.subtract(`serverData.${message.guild.id}.waitSize`, 1)
     }
   }
 };
