@@ -5,7 +5,7 @@ exports.run = async (client, message, args) => {
   let onayred = db.fetch(`onay.red.log.${message.guild.id}`);
   if(!onayred) return message.inlineReply('<:codesty_cross:844468546930606100> Onay-Red log kanalı ayarlı değil!")
   let yetkili = db.fetch(`bot.yetkili.rol.${message.guild.id}`);
-  if(!yetkili) return message.inlineReply('<:codesty_cross:844468546930606100> Bot Yetkilisi rolü ayarlı değil!")
+  if(!yetkili) return message.inlineReply('<:codesty_cross:844468546930606100> Bot Yetkilisi rolü ayarlı değil!')
   if(!message.member.roles.cache.has(yetkili)) return message.reply('<:codesty_cross:844468546930606100> Bot yetkilisi değilsin!')
   let botid = args[0];
   if(!botid) return message.inlineReply('<:codesty_cross:844468546930606100> Lütfen bir bot ID gir!')
