@@ -16,9 +16,10 @@ exports.run = async (client, message, args) => {
     if(!botvaryok) {
       return message.inlineReply("<:codesty_cross:844468546930606100> Sistemde böyle bir bot yok!')
     } else {
-      if(client.channels.cache.get(onayred).send('<:codesty_check:844468545877442560> <@"+botid+"> adlı bot <@"+message.author.id+"> tarafından reddedildi!\nSebep: **"+sebep+"**"));
-      message.inlineReply('<:codesty_check:844468545877442560> <@"+botid+"> adlı bot reddedildi!")
+      if(client.channels.cache.get(onayred).send('<:codesty_check:844468545877442560> <@${botid}> adlı bot <@${message.author.id}> tarafından reddedildi!\n<:codesty_join:844468549417697350> Sebep: **${sebep}**"));
+      message.inlineReply('<:codesty_check:844468545877442560> <@${botid}> adlı bot reddedildi!")
       db.delete(`bot.id.${botid}`)
+      db.subtract(`serverData.${message.guild.id}.waitSize`, 1)
     }
   }
 };
