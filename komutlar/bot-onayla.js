@@ -1,5 +1,5 @@
 const discord = require("discord.js");
-const db = require("quick.db");
+const db = require("croxydb");
 
 exports.run = async (client, message, args) => {
   let onayred = db.fetch(`onay.red.log.${message.guild.id}`);
