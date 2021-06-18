@@ -13,7 +13,7 @@ exports.run = async (client, message, args) => {
   if (!arg) {
     return message.channel.send(
       red.setDescription(
-        "<:codesty_cross:844468546930606100> Girebileceğin argümentler: bot-ekle-kanal **|** bot-log-kanal **|** onay-red-log-kanal **|** bot-yetkili-rol"
+        "<:codesty_cross:844468546930606100> Girebileceğin argümentler: `bot-ekle-kanal` **|** `bot-log-kanal` **|** `onay-red-log-kanal` **|** `bot-yetkili-rol` **|** `sıfırla`"
       )
     );
   } else if (arg == "bot-ekle-kanal") {
