@@ -19,6 +19,7 @@ exports.run = async (client, message, args) => {
     db.delete(`bot.id.${botid}`)
     db.subtract(`serverData.${message.guild.id}.waitSize`, 1)
   }
+} 
 };
 exports.help = {
 name: "bot-onayla"
